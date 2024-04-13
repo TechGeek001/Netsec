@@ -1,2 +1,2 @@
-# netsec-db
-Docker container for netsec
+# Application overview
+* Vulnerable database using outdated MySQL
