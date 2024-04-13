@@ -11,7 +11,7 @@ git init
 git config pull.rebase false  # merge (the default strategy)
 
 # Track repository, do not enter subdirectory
-git remote add -f origin https://github.com/TechGeek001/Netsec/mysqldb.git
+git remote add -f origin https://github.com/TechGeek001/Netsec.git
 
 # Enable the tree check feature
 git config core.sparseCheckout true
@@ -30,9 +30,7 @@ echo 'mysqldb/UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
 ## Download with pull, not clone
 git pull origin main
 
-echo 'cd into mysqldb/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
-echo 'docker build -t tnetsecdb .'
-echo 'docker run -d --name netsecdb --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tnetsecdb:latest'
+echo 'cd into mysqldb/mysqldb/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
 
 # References:
 #   https://terminalroot.com/how-to-clone-only-a-subdirectory-with-git-or-svn
