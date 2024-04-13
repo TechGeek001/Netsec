@@ -22,6 +22,7 @@ git config core.sparseCheckout true
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
 echo 'UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
+echo 'UbuntuServerX86-64/etc_mysql_mysqlconfd_mysql.conf' >> .git/info/sparse-checkout
 echo 'populate_db.py' >> .git/info/sparse-checkout
 echo 'first_names.txt' >> .git/info/sparse-checkout
 echo 'last_names.txt' >> .git/info/sparse-checkout

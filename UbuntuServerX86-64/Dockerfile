@@ -43,9 +43,13 @@ RUN dpkg -i mysql-client_5.7.20-1ubuntu16.04_amd64.deb
 RUN export DEBIAN_FRONTEND="noninteractive"
 RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
+#introduce the vulnerability
+#make the plugins directory writable
+RUN chmod 0777 /usr/lib/mysql/plugin
 
 #--------------------------------------------
 
 # Finished!
 RUN echo $'\n\
 * Container is ready'
+# docker run -d --name netsecdb --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tnetsecdb:latest
