@@ -1,6 +1,6 @@
-CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';
-CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';
-GRANT ALL ON *.* TO 'myuser'@'localhost';
-GRANT ALL ON *.* TO 'myuser'@'%';
+CREATE USER 'tiaan.jerjerrod'@'localhost' IDENTIFIED BY 'doubleEFFORT!!';
+CREATE USER 'tiaan.jerjerrod'@'%' IDENTIFIED BY 'doubleEFFORT!!';
+GRANT ALL ON *.* TO 'tiaan.jerjerrod'@'localhost';
+GRANT ALL ON *.* TO 'tiaan.jerjerrod'@'%';
 FLUSH PRIVILEGES;
 exit
