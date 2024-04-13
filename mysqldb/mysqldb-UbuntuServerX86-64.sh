@@ -2,7 +2,7 @@
 # running a minimal Ubuntu server image
 
 # Create a directory, so Git doesn't get messy, and enter it
-mkdir netsecdb && cd netsecdb
+mkdir mysqldb && cd mysqldb
 
 # Start a Git repository
 git init
@@ -11,7 +11,7 @@ git init
 git config pull.rebase false  # merge (the default strategy)
 
 # Track repository, do not enter subdirectory
-git remote add -f origin https://github.com/TechGeek001/netsec-db.git
+git remote add -f origin https://github.com/TechGeek001/Netsec.git
 
 # Enable the tree check feature
 git config core.sparseCheckout true
@@ -20,21 +20,17 @@ git config core.sparseCheckout true
 # That is inside the hidden .git directory that was created
 # by running the command: git init
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
-echo 'UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
-echo 'UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
-echo 'UbuntuServerX86-64/lib_systemd_system_mysql.service' >> .git/info/sparse-checkout
-echo 'UbuntuServerX86-64/etc_mysql_mysqlconfd_mysqld.cnf' >> .git/info/sparse-checkout
-echo 'UbuntuServerX86-64/config_mysql.txt' >> .git/info/sparse-checkout
-echo 'UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
-echo 'populate_db.py' >> .git/info/sparse-checkout
-echo 'first_names.txt' >> .git/info/sparse-checkout
-echo 'last_names.txt' >> .git/info/sparse-checkout
-echo 'domains.txt' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/lib_systemd_system_mysql.service' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/etc_mysql_mysqlconfd_mysqld.cnf' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/config_mysql.txt' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin main
 
-echo 'cd into UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
+echo 'cd into mysqldb/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
 echo 'docker build -t tnetsecdb .'
 echo 'docker run -d --name netsecdb --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tnetsecdb:latest'
 
