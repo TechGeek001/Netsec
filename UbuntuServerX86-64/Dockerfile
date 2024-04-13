@@ -46,7 +46,7 @@ RUN export DEBIAN_FRONTEND="noninteractive"
 RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
-COPY config_mysql.sh /root/config_mysql.sh
+COPY config_mysql.txt /root/config_mysql.txt
 #--------------------------------------------
 
 # Finished!
