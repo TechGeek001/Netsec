@@ -24,6 +24,7 @@ echo 'UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'UbuntuServerX86-64/etc_mysql_mysqlconfd_mysqld.cnf' >> .git/info/sparse-checkout
 echo 'UbuntuServerX86-64/config_mysql.txt' >> .git/info/sparse-checkout
+echo 'UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
 echo 'populate_db.py' >> .git/info/sparse-checkout
 echo 'first_names.txt' >> .git/info/sparse-checkout
 echo 'last_names.txt' >> .git/info/sparse-checkout
