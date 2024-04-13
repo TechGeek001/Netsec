@@ -1,6 +1,8 @@
 # Script to clone specific files for creating a vulnerable netsec-db server environment within a Docker container
 # running a minimal Ubuntu server image
 
+mkdir mysqldb && cd mysqldb
+
 # Start a Git repository
 git init
 
