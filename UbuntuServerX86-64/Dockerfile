@@ -47,6 +47,10 @@ RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 COPY config_mysql.txt /root/config_mysql.txt
+COPY setup.sh /root/setup.sh
+RUN cd /root
+RUN chmod +x /setup.sh
+RUN ./setup.sh
 #--------------------------------------------
 
 # Finished!
