@@ -26,7 +26,7 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     # chmod +x setup.sh
     # ./setup.sh
     ```
-    This script creates the following remote user: "tiaan.jerjerrod" with the password "doubleEFFORT!!"
+    This script creates a remote user "tiaan.jerjerrod" and gives it permission to execute arbitrary user-defined functions
 # Run the exploit
 This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-dev
 1. Start the MSF Console
