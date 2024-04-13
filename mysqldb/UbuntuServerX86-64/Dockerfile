@@ -53,6 +53,8 @@ COPY setup.sh /root/setup.sh
 #this is the flag
 RUN mkdir "/home/admin"
 RUN echo "c0ffee-face" >> "/home/admin/flag.txt"
+#clean up the temp folder
+RUN rm -rf /root/temp
 #--------------------------------------------
 
 # Finished!
