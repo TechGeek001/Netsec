@@ -26,3 +26,4 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     # chmod +x setup.sh
     # ./setup.sh
     ```
+    This script creates the following remote user: "tiaan.jerjerrod" with the password "doubleEFFORT!!"
