@@ -2,7 +2,7 @@
 # running a minimal Ubuntu server image
 
 # Create a directory, so Git doesn't get messy, and enter it
-mkdir netsec-db && cd netsec-db
+mkdir netsecdb && cd netsecdb
 
 # Start a Git repository
 git init
