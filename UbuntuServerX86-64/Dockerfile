@@ -23,6 +23,8 @@ RUN apt-get update
 RUN apt-get install apt-utils dpkg-dev debconf debconf-utils -y
 RUN apt-get install net-tools iputils-ping iptables iproute2 wget nmap bind9-dnsutils dnsutils inetutils-traceroute isc-dhcp-common -y
 RUN apt-get install vim acl sudo telnet ssh netcat nfs-common -y
+#I like Nano
+RUN apt-get install nano
 
 #install dependencies for systemd and syslog
 RUN apt-get install systemd systemd-sysv syslog-ng syslog-ng-core syslog-ng-mod-sql syslog-ng-mod-mongodb -y
@@ -45,7 +47,16 @@ RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
 #introduce the vulnerability
 #make the plugins directory writable
+COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+RUN systemctl restart mysql
 RUN chmod 0777 /usr/lib/mysql/plugin
+RUN mysql
+RUN echo "CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';"
+RUN echo "CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';"
+RUN echo "GRANT ALL ON *.* TO 'myuser'@'localhost';"
+RUN echo "GRANT ALL ON *.* TO 'myuser'@'%';"
+RUN echo "FLUSH PRIVILEGES;"
+RUN echo "exit"
 
 #--------------------------------------------
 
