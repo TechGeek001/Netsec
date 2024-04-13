@@ -1,9 +1,6 @@
 # Script to clone specific files for creating a vulnerable netsec-db server environment within a Docker container
 # running a minimal Ubuntu server image
 
-# Create a directory, so Git doesn't get messy, and enter it
-mkdir mysqldb && cd mysqldb
-
 # Start a Git repository
 git init
 
@@ -30,7 +27,7 @@ echo 'mysqldb/UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
 ## Download with pull, not clone
 git pull origin main
 
-echo 'cd into mysqldb/mysqldb/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
+echo 'cd into mysqldb/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
 
 # References:
 #   https://terminalroot.com/how-to-clone-only-a-subdirectory-with-git-or-svn
