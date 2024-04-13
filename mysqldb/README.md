@@ -3,7 +3,7 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
 # Setup
 1. Download files to build container
     ```
-    $ wget https://raw.githubusercontent.com/TechGeek001/netsec-db/main/netsecdb-UbuntuServerX86-64.sh
+    $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/mysqldb/main/netsecdb-UbuntuServerX86-64.sh
     $ chmod +x netsecdb-UbuntuServerX86-64.sh
     $ ./netsec-db-UbuntuServerX86-64.sh
     ```
