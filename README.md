@@ -23,5 +23,5 @@
 5. Finish configuring MySQL (this can't be done during the build)
     ```
     # cd /root
-    # config_mysql.txt | mysql
+    # cat config_mysql.txt | mysql
     ```
