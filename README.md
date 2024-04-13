@@ -55,3 +55,6 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     Server username: root
     ```
 5. The flag is located in ```/home/admin```.
+# Customizations
+1. The MySQL login credentials can be changed by editing ```UbuntuServerX86-64/config_mysql.txt```
+2. The flag filename and contents can be changed by editing ```UbuntuServerX86-64/Dockerfile``` below the ```#this is the flag``` comment
