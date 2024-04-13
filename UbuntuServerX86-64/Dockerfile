@@ -45,19 +45,8 @@ RUN dpkg -i mysql-client_5.7.20-1ubuntu16.04_amd64.deb
 RUN export DEBIAN_FRONTEND="noninteractive"
 RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
-#introduce the vulnerability
-#make the plugins directory writable
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
-RUN systemctl restart mysql
-RUN chmod 0777 /usr/lib/mysql/plugin
-RUN mysql
-RUN echo "CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';"
-RUN echo "CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';"
-RUN echo "GRANT ALL ON *.* TO 'myuser'@'localhost';"
-RUN echo "GRANT ALL ON *.* TO 'myuser'@'%';"
-RUN echo "FLUSH PRIVILEGES;"
-RUN echo "exit"
-
+COPY config_mysql.sh /root/config_mysql.sh
 #--------------------------------------------
 
 # Finished!
