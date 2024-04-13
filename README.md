@@ -52,5 +52,5 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     ```
     > sessions -i 1
     > show guid
-    root
+    Server username: root
     ```
