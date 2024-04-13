@@ -32,7 +32,7 @@ RUN apt-get install systemd systemd-sysv syslog-ng syslog-ng-core syslog-ng-mod-
 #start systemd
 CMD ["/usr/lib/systemd/systemd", "--system"]
 
-#install the outdated MySQL server and introduce the vulnerability
+#install the outdated MySQL server
 RUN apt-get install libaio1 libc6 libmecab2 libgcc1 libstdc++6 libtinfo5 perl libnuma1 python3 python-is-python3 psmisc -y
 RUN mkdir /root/temp
 RUN cd /root/temp
@@ -41,15 +41,16 @@ RUN tar xopf mysql-server_5.7.20-1ubuntu16.04_amd64.deb-bundle.tar
 RUN dpkg -i mysql-common_5.7.20-1ubuntu16.04_amd64.deb
 RUN dpkg -i mysql-community-client_5.7.20-1ubuntu16.04_amd64.deb
 RUN dpkg -i mysql-client_5.7.20-1ubuntu16.04_amd64.deb
-RUN export DEBIAN_FRONTEND="noninteractive"
+#RUN export DEBIAN_FRONTEND="noninteractive"
 RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
+#run MySQL as root and disable secure_file_priv
+COPY lib_systemd_mysql.service /lib/systemd/mysql.service
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 COPY config_mysql.txt /root/config_mysql.txt
+#this is the setup script that has to be run after MySQL is running
 COPY setup.sh /root/setup.sh
-RUN cd /root
-RUN chmod +x /setup.sh
-RUN ./setup.sh
+#this is the flag
 RUN mkdir "/home/admin"
 RUN echo "c0ffee-face" >> "/home/admin/flag.txt"
 #--------------------------------------------
