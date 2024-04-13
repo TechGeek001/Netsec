@@ -54,3 +54,4 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     > show guid
     Server username: root
     ```
+5. The flag is located in ```/home/admin```.
