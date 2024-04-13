@@ -45,7 +45,7 @@ RUN dpkg -i mysql-client_5.7.20-1ubuntu16.04_amd64.deb
 RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 
 #run MySQL as root and disable secure_file_priv
-COPY lib_systemd_mysql.service /lib/systemd/mysql.service
+COPY lib_systemd_system_mysql.service /lib/systemd/system/mysql.service
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 COPY config_mysql.txt /root/config_mysql.txt
 #this is the setup script that has to be run after MySQL is running
