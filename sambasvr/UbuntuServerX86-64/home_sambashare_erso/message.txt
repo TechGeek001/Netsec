@@ -1,6 +1,6 @@
 Hello, I am Galen Erso. Director Krennic has hidden the Death Star plans are hidden somewhere in the network. I don't know where they are, but I want to help you retrieve them. I have hidden my MySQL password in an image of a Star Destroyer in my home directory on the Empire's file server using a program called "steghide"; the password is my daughter's name: "jyn". Hopefully there is information there that helps you. Here's what else I know:
 
-- I don't know what IP address the Empire's share drive is on, but it uses the default SMB port
+- I don't know what IP address the Empire's Samba share drive is on, but it uses the default SMB port
 - All users access the share drive with a common set of credentials
 - Kendal Ozzel keeps backup copies of important documents on the Empire's share drive
 - I don't know what IP address the Empire's database server is on, but it uses the default MySQL port
