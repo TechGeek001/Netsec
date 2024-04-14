@@ -27,6 +27,14 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     # ./setup.sh
     ```
     The setup script populates the databases, creates administrative users with the correct permissions, and removes the /root/temp folder.
+# Verify
+1. Confirm that the /root/temp directory is gone with ```ls /root/```
+2. Confirm that the database was created
+   ```
+   # mysql
+   mysql> use database eadu;
+   mysql> select * from users;
+   ```
 # Exploit
 This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-dev
 1. Start the MSF Console

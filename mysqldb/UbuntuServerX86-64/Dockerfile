@@ -35,7 +35,7 @@ CMD ["/usr/lib/systemd/systemd", "--system"]
 #install the outdated MySQL server
 RUN apt-get install libaio1 libc6 libmecab2 libgcc1 libstdc++6 libtinfo5 perl libnuma1 python3 python-is-python3 psmisc -y
 RUN mkdir -p /root/temp
-RUN cd /root/temp
+WORKDIR /root/temp
 RUN wget https://downloads.mysql.com/archives/get/p/23/file/mysql-server_5.7.20-1ubuntu16.04_amd64.deb-bundle.tar
 RUN tar xopf mysql-server_5.7.20-1ubuntu16.04_amd64.deb-bundle.tar
 RUN dpkg -i mysql-common_5.7.20-1ubuntu16.04_amd64.deb
@@ -57,3 +57,6 @@ COPY setup.sh /root/setup.sh
 
 #plant the flag
 COPY "Death-Star-Plans.png" "/root/Death-Star-Plans.png"
+
+#restore the original working directory
+WORKDIR /
