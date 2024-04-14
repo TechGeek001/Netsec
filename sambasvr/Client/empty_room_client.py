@@ -7,10 +7,10 @@ def send_credentials(host, port, directory, username, password, interval):
             # Create a new socket for each connection attempt
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.connect((host, port))
-				
-				# Wait for the server to send the "Directory: " prompt
+                
+                # Wait for the server to send the "Directory: " prompt
                 print(sock.recv(1024).decode(), end='')
-				
+
                 # Send the directory followed by a newline
                 sock.sendall(directory.encode() + b'\n')
 
@@ -37,7 +37,7 @@ def send_credentials(host, port, directory, username, password, interval):
 def main():
     host = 'samba.netsec-docker.isi.jhu.edu'
     port = 45
-	directory = '/Public'
+    directory = '/Public'
     username = 'empire'
     password = 'NOrebelsPLEASE'
     interval = 10

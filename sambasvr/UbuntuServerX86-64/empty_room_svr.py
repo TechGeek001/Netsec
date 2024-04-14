@@ -2,11 +2,11 @@ import socket
 
 def handle_client(client_socket):
     try:
-		client_socket.sendall(b"Remote Directory: ")
+        client_socket.sendall(b"Remote Directory: ")
         directory = client_socket.recv(1024).strip()
         if not directory:
             return  # Terminate if no directory is provided
-		
+        
         client_socket.sendall(b"Username: ")
         username = client_socket.recv(1024).strip()
         if not username:
