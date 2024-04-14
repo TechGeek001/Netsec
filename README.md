@@ -2,6 +2,36 @@
 1. MySQL 5.7.20
 2. Samba
 
+# Modify Existing Infrastructure
+This CTF is designed to work on top of the existing netsec-docker infrastructure. It requires the dnssvr and dhcpsvr containers.
+1. In the dnssvr container, append the following lines to ```/etc/bind/zones/db.netsec-docker.isi.jhu.edu```:
+   ```
+   ; CTF Targets
+   samba.netsec-docker.isi.jhu.edu  IN  A  192.168.25.150
+   mysql.netsec-docker.isi.jhu.edu  IN  A  192.168.25.151
+   ```
+2. In the dnssvr container, append the following lines to ```/etc/bind/zones/db.25.168.192```:
+   ```
+   ; CTF Targets
+   150.25.168.192.in-addr-arpa.  IN  PTR  samba.netsec-docker.isi.jhu.edu ; 192.168.25.150
+   151.25.168.192.in-addr-arpa.  IN  PTR  mysql.netsec-docker.isi.jhu.edu ; 192.168.25.151
+   ```
+3. Restart the DNS server with ```# systemctl restart bind9 && systemctl status bind9```
+4. In the dhcpsvr container, append the following lines to ```/etc/dhcp/dhcpd.conf```
+   ```
+   # CTF Ubuntu server, Samba
+   host samba {
+     hardware ethernet <interface mac>;
+     fixed-address samba.netsec-docker.isi.jhu.edu;
+   }
+   # CTF Ubuntu server, MySQL
+   host mysql {
+     hardware ethernet <interface mac>;
+     fixed-address mysql.netsec-docker.isi.jhu.edu;
+   }
+   ```
+5. Restart the DHCP server with ```# systemctl restart isc-dhcp-server && systemctl status isc-dhcp-server```
+
 # Flag Walkthrough
 The goal of this CTF is to get the Death Star plans from the database server.
 1. Get Kendal Ozzel's creds
