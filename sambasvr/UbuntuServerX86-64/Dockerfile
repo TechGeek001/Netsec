@@ -33,7 +33,7 @@ RUN apt-get install systemd systemd-sysv syslog-ng syslog-ng-core syslog-ng-mod-
 CMD ["/usr/lib/systemd/systemd", "--system"]
 
 #install samba
-RUN apt-get install samba
+RUN apt-get install samba -y
 RUN cd /home
 RUN mkdir -p /home/sambashare
 COPY etc_samba_smb.conf /etc/samba/smb.conf
