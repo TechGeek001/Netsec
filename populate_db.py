@@ -59,12 +59,12 @@ while current_date <= date_max:
 # Insert 100 dummy users into the table
 user_table = {
     0: {
-        "first_name": "Maximilian",
-        "last_name": "Veers",
-        "name": "Maximilian Veers",
-        "email": "mveers@socialmedia.net",
-        "password": "startYOURlanding1",
-        "password_hash": hashlib.md5(bytes("startYOURlanding1".encode("utf-8"))).hexdigest(),
+        "first_name": "Kendal",
+        "last_name": "Ozzel",
+        "name": "Kendal Ozzel",
+        "email": "kendal.ozzel@empire.mil",
+        "password": "tooCLOSEtoHOTH",
+        "password_hash": hashlib.md5(bytes("tooCLOSEtoHOTH".encode("utf-8"))).hexdigest(),
         "account_created": datetime.date(2020, 9, 13),
         "pwd_changed": datetime.date(2020, 9, 13)
     }
