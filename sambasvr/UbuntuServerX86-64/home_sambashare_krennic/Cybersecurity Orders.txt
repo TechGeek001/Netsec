@@ -1,0 +1,2 @@
+STOP uploading arbitrary user-defined functions to the MySQL database - it's a huge security risk and needs to be fixed immediately.
+- Director Krennic
