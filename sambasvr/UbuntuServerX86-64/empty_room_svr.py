@@ -2,6 +2,11 @@ import socket
 
 def handle_client(client_socket):
     try:
+		client_socket.sendall(b"Remote Directory: ")
+        directory = client_socket.recv(1024).strip()
+        if not directory:
+            return  # Terminate if no directory is provided
+		
         client_socket.sendall(b"Username: ")
         username = client_socket.recv(1024).strip()
         if not username:
@@ -12,8 +17,8 @@ def handle_client(client_socket):
         if not password:
             return  # Terminate if no password is provided
 
-        # Just echo back received username and password for the sake of this mock server
-        client_socket.sendall(b"Access denied.")
+        # Echo something back
+        client_socket.sendall(b"Access denied. No such file or directory.")
     except Exception as e:
         print(f"Error: {e}")
     finally:

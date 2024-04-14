@@ -1,17 +1,23 @@
 import socket
 import time
 
-def send_credentials(host, port, username, password, interval):
+def send_credentials(host, port, directory, username, password, interval):
     while True:
         try:
             # Create a new socket for each connection attempt
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.connect((host, port))
+				
+				# Wait for the server to send the "Directory: " prompt
+                print(sock.recv(1024).decode(), end='')
+				
+                # Send the directory followed by a newline
+                sock.sendall(directory.encode() + b'\n')
 
                 # Wait for the server to send the "Username: " prompt
                 print(sock.recv(1024).decode(), end='')
 
-                # Send the username followed by a newline to simulate pressing Enter
+                # Send the username followed by a newline
                 sock.sendall(username.encode() + b'\n')
 
                 # Wait for the server to send the "Password: " prompt
@@ -26,17 +32,17 @@ def send_credentials(host, port, username, password, interval):
         except Exception as e:
             print(f"Connection failed: {e}")
         
-        # Sleep for the specified interval before sending the credentials again
         time.sleep(interval)
 
 def main():
-    host = 'samba.netsec-docker.isi.jhu.edu'  # Server IP (change if different)
-    port = 45           # Port on which server is listening, adjusted to match your server
-    username = 'empire'  # Example username
-    password = 'NOrebelsPLEASE'  # Example password
-    interval = 10        # Time in seconds between each login attempt
+    host = 'samba.netsec-docker.isi.jhu.edu'
+    port = 45
+	directory = '/Public'
+    username = 'empire'
+    password = 'NOrebelsPLEASE'
+    interval = 10
 
-    send_credentials(host, port, username, password, interval)
+    send_credentials(host, port, directory, username, password, interval)
 
 if __name__ == "__main__":
     main()
