@@ -21,6 +21,7 @@ git config core.sparseCheckout true
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
 echo 'sambasvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'sambasvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
+echo 'sambasvr/UbuntuServerX86-64/etc_samba_smb.conf' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin main
