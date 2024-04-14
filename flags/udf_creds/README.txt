@@ -1,1 +1,0 @@
-Open the ZIP archive with password "tooCLOSEtoHOTH"

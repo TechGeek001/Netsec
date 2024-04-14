@@ -19,7 +19,7 @@ INSERT INTO users (name, password, remarks) VALUES (
 INSERT INTO users (name, password, remarks) VALUES (
 "Orson Krennic",
 "IamREMARKABLE",
-"Deceased // Reason: Death Star Strike on Scarif"
+"Deceased // Reason: Death Star strike on Scarif"
 );
 INSERT INTO users (name, password, remarks) VALUES (
 "Maximilian Veers",

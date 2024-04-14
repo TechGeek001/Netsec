@@ -1,6 +1,0 @@
-Hello, I am Galen Erso. The Death Star plans are on the Empire's database server, but I don't have the credentials to access them. I have hidden my MySQL password in an image of a Star Destroyer in my home directory on the file server using a program called "steghide"; the password is my daughter's name: "jyn". Hopefully you can find information there that will help you get to the plans. Here is some other information that might help:
-
-- Orson Krennic has unrestricted access to the database. He can even upload arbitrary user-defined functions to it.
-- Kendal Ozzel keeps backup copies of important documents on the Empire's share drive.
-
-Good luck!
