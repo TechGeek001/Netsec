@@ -27,7 +27,7 @@ echo 'mysqldb/UbuntuServerX86-64/create_users.sql' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/eadu.sql' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/scarif.sql' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
-echo 'mysqldb/UbuntuServerX86-64/Death-Star-Plans.sh' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/Death-Star-Plans.png' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin main
