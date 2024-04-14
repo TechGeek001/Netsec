@@ -44,3 +44,7 @@ RUN chmod -R 0775 /home/sambashare
 COPY home_sambashare_erso /home/sambashare/galen.erso
 COPY home_sambashare_ozzel /home/sambashare/kendal.ozzel
 COPY home_sambashare_krennic /home/sambashare/orson.krennic
+
+#copy the fake telnet server for the fake login traffic
+RUN mkdir -p /root/OFF-LIMITS
+COPY empty_room_svr.py /root/OFF-LIMITS/empty_room_svr.py
