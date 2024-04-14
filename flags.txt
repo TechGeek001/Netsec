@@ -1,9 +1,15 @@
-- Admiral Ozzel was a fool. Not only did he jump out of hyperspace too close to Hoth, he also re-used passwords for important files. Incompetence!
-- When the Empire migrated its database from Eadu to Scarif, it made significant security improvements. It almost seems like Galen Erso wanted the Empire's secrets to get stolen when he built the user table, storing the passwords in plain text.
-- Tiaan Jerjerrod is the only person that the Empire trusts to execute arbitrary user-defined functions on the Empire's MySQL instance.
-
 Flag: Galen Erso's DB creds in steghide file
+To access, perform an nmap scan on the network to find the IP address of the file server (standard port)
+Mount the share on Kali
+Access galen erso's home directory and download the file
+use steghide to extract the database creds
 
 Flag: Password-protected file with tiaan.jerjerrod's creds
-tiaan.jerjerrod -> UDF exploit
+Use nmap to find the IP address of the MySQL server (standard port)
+Use galen erso's creds to access the database
+Use kendal ozzel's creds on the file in his home directory to get udf creds
+
 Flag: Death Star plans
+Exploit the UDF vulnerability in the database server using orson krennic's creds
+As root, go to /home/admin
+Get the plans
