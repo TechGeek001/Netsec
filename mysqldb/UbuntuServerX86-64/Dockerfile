@@ -47,12 +47,15 @@ RUN dpkg -i mysql-community-server_5.7.20-1ubuntu16.04_amd64.deb
 #run MySQL as root and disable secure_file_priv
 COPY lib_systemd_system_mysql.service /lib/systemd/system/mysql.service
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
-COPY config_mysql.txt /root/config_mysql.txt
+
+RUN mkdir "/root"
+COPY create_users.sql /root/temp/create_users.sql
+COPY eadu.sql /root/temp/eadu.sql
+COPY scarif.sql /root/temp/scarif.sql
+
 #this is the setup script that has to be run after MySQL is running
 RUN chmod 777 /usr/lib/mysql/plugin
 COPY setup.sh /root/setup.sh
-#this is the flag
-RUN mkdir "/home/admin"
-RUN echo "c0ffee-face" >> "/home/admin/flag.txt"
-#clean up the temp folder
-RUN rm -rf /root/temp
+
+#plant the flag
+RUN echo "The Death Star plans are not in the main computer" >> "/root/flag.txt"

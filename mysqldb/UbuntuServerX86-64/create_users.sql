@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS scarif;
-CREATE DATABASE IF NOT EXISTS eadu;
 CREATE USER 'orson.krennic'@'%' IDENTIFIED BY 'kyberTHIEF1';
 GRANT ALL PRIVILEGES ON *.* TO 'orson.krennic'@'%';
 CREATE USER 'maximilian.veers'@'%' IDENTIFIED BY 'startYOURlanding';
@@ -8,14 +6,3 @@ CREATE USER 'galen.erso'@'%' IDENTIFIED BY 'starDUST';
 GRANT ALL PRIVILEGES ON eadu.* To 'galen.erso'@'%';
 CREATE USER 'kendal.ozzel'@'%' IDENTIFIED BY 'tooCLOSEtoHOTH';
 FLUSH PRIVILEGES;
-USE eadu;
-CREATE TABLE IF NOT EXISTS users (
-id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(255),
-password VARCHAR(32)
-);
-INSERT INTO users (name, password) VALUES (
-"Kendal Ozzel",
-"tooCLOSEtoHOTH"
-);
-exit

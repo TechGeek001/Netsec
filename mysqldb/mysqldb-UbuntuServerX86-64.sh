@@ -23,7 +23,9 @@ echo 'mysqldb/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/lib_systemd_system_mysql.service' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/etc_mysql_mysqlconfd_mysqld.cnf' >> .git/info/sparse-checkout
-echo 'mysqldb/UbuntuServerX86-64/config_mysql.txt' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/create_users.sql' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/eadu.sql' >> .git/info/sparse-checkout
+echo 'mysqldb/UbuntuServerX86-64/scarif.sql' >> .git/info/sparse-checkout
 echo 'mysqldb/UbuntuServerX86-64/setup.sh' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
