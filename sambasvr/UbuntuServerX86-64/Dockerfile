@@ -39,3 +39,7 @@ RUN mkdir -p /home/sambashare
 COPY etc_samba_smb.conf /etc/samba/smb.conf
 RUN chown nobody:nogroup /home/sambashare
 RUN chmod -R 0775 /home/sambashare
+
+#copy the important files
+COPY home_sambashare_erso /home/sambashare/galen.erso
+COPY home_sambashare_ozzel /home/sambashare/kendal.ozzel
