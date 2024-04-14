@@ -18,7 +18,7 @@ def handle_client(client_socket):
             return  # Terminate if no password is provided
 
         # Echo something back
-        client_socket.sendall(b"Access denied. No such file or directory.")
+        client_socket.sendall(b"Access denied. The Empire's share drive has moved.")
     except Exception as e:
         print(f"Error: {e}")
     finally:
