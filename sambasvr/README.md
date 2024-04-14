@@ -29,5 +29,5 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
 2. Mount the drive
     ```
     $ sudo mkdir /mnt/public
-    $ sudo mount -t cifs //<target-ip>/Public /mnt/public
+    $ sudo mount -t cifs -o username=<username> //<target-ip-or-hostname>/Public /mnt/public
     ```
