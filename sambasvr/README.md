@@ -24,8 +24,9 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     ```
     # systemctl restart smbd
     ```
-6. Inside Kali, mount the drive with
+6. Inside Kali, install the CIFS utility and then mount the drive
     ```
+    $ sudo apt-get install cifs-utils
     $ sudo mkdir /mnt/public
     $ sudo mount -t cifs //<target-ip>/Public /mnt/public
     ```
