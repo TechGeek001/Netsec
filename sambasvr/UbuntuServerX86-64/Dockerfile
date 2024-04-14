@@ -37,5 +37,5 @@ RUN apt-get install samba -y
 RUN cd /home
 RUN mkdir -p /home/sambashare
 COPY etc_samba_smb.conf /etc/samba/smb.conf
-COPY chown nobody:nogroup /home/sambashare
-COPY chmod -R 0775 /home/sambashare
+RUN chown nobody:nogroup /home/sambashare
+RUN chmod -R 0775 /home/sambashare
