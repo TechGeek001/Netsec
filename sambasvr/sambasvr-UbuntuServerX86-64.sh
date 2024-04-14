@@ -22,8 +22,8 @@ git config core.sparseCheckout true
 echo 'sambasvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'sambasvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'sambasvr/UbuntuServerX86-64/etc_samba_smb.conf' >> .git/info/sparse-checkout
-echo 'sambasvr/UbuntuServerX86-64/home_sambashare_erso' >> .git/info/sparse-checkout
-echo 'sambasvr/UbuntuServerX86-64/home_sambashare_ozzel' >> .git/info/sparse-checkout
+echo 'sambasvr/home_sambashare_erso' >> .git/info/sparse-checkout
+echo 'sambasvr/home_sambashare_ozzel' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin main
