@@ -49,6 +49,7 @@ COPY lib_systemd_system_mysql.service /lib/systemd/system/mysql.service
 COPY etc_mysql_mysqlconfd_mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 COPY config_mysql.txt /root/config_mysql.txt
 #this is the setup script that has to be run after MySQL is running
+RUN chmod 777 /usr/lib/mysql/plugin
 COPY setup.sh /root/setup.sh
 #this is the flag
 RUN mkdir "/home/admin"
