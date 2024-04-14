@@ -1,7 +1,3 @@
-# Docker Containers
-1. MySQL 5.7.20
-2. Samba
-
 # Modify Existing Infrastructure
 This CTF is designed to work on top of the existing netsec-docker infrastructure. It requires the dnssvr and dhcpsvr containers.
 1. In the dnssvr container, append the following lines to ```/etc/bind/zones/db.netsec-docker.isi.jhu.edu```:
@@ -31,6 +27,9 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
    }
    ```
 5. Restart the DHCP server with ```# systemctl restart isc-dhcp-server && systemctl status isc-dhcp-server```
+# Set up Docker Containers
+1. [Set up the Samba docker container](https://github.com/TechGeek001/Netsec/blob/main/sambasvr/README.md)
+2. [Set up the MySQL docker container](https://github.com/TechGeek001/Netsec/blob/main/mysqldb/README.md)
 # Generate the Login Network Traffic
 This step gives the CTF participant traffic to intercept, revealing the creds needed to access the Samba share
 1. On whatever server (not the one the Samba container is on) execute the following commands:
