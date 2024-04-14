@@ -43,3 +43,6 @@ RUN chmod -R 0775 /home/sambashare
 #copy the important files
 COPY home_sambashare_erso /home/sambashare/galen.erso
 COPY home_sambashare_ozzel /home/sambashare/kendal.ozzel
+RUN mkdir /home/sambashare/orson.krennic
+RUN touch /home/sambashare/orson.krennic/plans.txt
+RUN "The Death Star plans are hidden in /root on the database server. It is impossible for anyone to access them!" >> /home/sambashare/orson.krennic/plans.txt
