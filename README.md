@@ -42,11 +42,14 @@ The goal of this CTF is to get the Death Star plans from the database server.
   * nmap for samba (445)
   * use wireshark to capture traffic going to the IP address
   * capture network traffic (telnet to port 45) with the share drive creds
-2. Get Kendal Ozzel's creds
+2. Get Galen Erso's creds
   * mount the share
   * in galen.erso's directory, run steghide on the image
+  * cat the text file
+2. Get Kendal Ozzel's creds
   * nmap for mysql (3306)
-  * use creds to access eadu database
+  * use creds to access mysql
+  * use MySQL commands to find the eadu database and dump the users table
   * kendal ozzel's creds are in plaintext in the users table
 3. Get Orson Krennic's creds
   * in kendal.ozzel's directory, unlock the .zip
