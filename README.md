@@ -30,7 +30,8 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
 # Set up Docker Containers
 1. [Set up the Samba docker container](https://github.com/TechGeek001/Netsec/blob/main/sambasvr/README.md)
 2. [Set up the MySQL docker container](https://github.com/TechGeek001/Netsec/blob/main/mysqldb/README.md)
-# Generate the Login Network Traffic
+3. Prepare another server to act as the client (see "Generate Leaky Traffic", below). It needs network connectivity and Python 3; there are no other requirements.
+# Generate Leaky Traffic
 This step gives the CTF participant traffic to intercept, revealing the creds needed to access the Samba share
 1. On whatever server (not the one the Samba container is on) execute the following commands:
     ```
