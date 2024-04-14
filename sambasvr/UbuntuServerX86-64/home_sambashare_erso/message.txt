@@ -3,6 +3,6 @@ Hello, I am Galen Erso. The Death Star plans are on the Empire's database server
 - I don't know where the Empire's share drive is, but it uses the default SMB port and is accessible to anyone without a password
 - Kendal Ozzel keeps backup copies of important documents on the Empire's share drive
 - I don't know where the Empire's database server is, but it uses the default MySQL port
-- Orson Krennic has unrestricted access to the database. He can even upload arbitrary user-defined functions to it!
+- Orson Krennic has unrestricted access to the database. He can even upload arbitrary user-defined functions to it! He changes his password frequently and rarely uses the same password twice.
 
 Good luck!
