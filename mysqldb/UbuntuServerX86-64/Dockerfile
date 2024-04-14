@@ -55,9 +55,3 @@ RUN mkdir "/home/admin"
 RUN echo "c0ffee-face" >> "/home/admin/flag.txt"
 #clean up the temp folder
 RUN rm -rf /root/temp
-#--------------------------------------------
-
-# Finished!
-RUN echo $'\n\
-* Container is ready'
-# docker run -d --name netsecdb --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tnetsecdb:latest
