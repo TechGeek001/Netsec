@@ -16,9 +16,12 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     $ docker build -t tsambasvr .
     $ docker run -d --name sambasvr --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tsambasvr:latest
     ```
-4. Access the container and run the fake login listener in the background
+4. Exec into the Docker container
     ```
-    $ docker exec -it sambasvr bash
+    $ docker exec -it mysqldb bash
+    ```
+4. Start the fake login listener in the background
+    ```
     # python3 /root/OFF-LIMITS/empty_room_svr.py &
     ```
 # Accessing the Share Drive
