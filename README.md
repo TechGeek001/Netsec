@@ -46,16 +46,16 @@ The goal of this CTF is to get the Death Star plans from the database server.
   * mount the share
   * in galen.erso's directory, run steghide on the image
   * cat the text file
-2. Get Kendal Ozzel's creds
+3. Get Kendal Ozzel's creds
   * nmap for mysql (3306)
   * use creds to access mysql
   * use MySQL commands to find the eadu database and dump the users table
   * kendal ozzel's creds are in plaintext in the users table
-3. Get Orson Krennic's creds
+4. Get Orson Krennic's creds
   * in kendal.ozzel's directory, unlock the .zip
   * orson krennic's creds are in plaintext in a file in the archive
   * in orson.krennic's directory, find the location of the flag on the database server
-4. Get the Death Star plans
+5. Get the Death Star plans
   * exploit a UDF vulnerability on the database server
   * as root (on the database server) navigate to the flag directory
   * download the flag file
