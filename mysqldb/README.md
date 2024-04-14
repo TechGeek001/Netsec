@@ -26,7 +26,7 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     # chmod +x setup.sh
     # ./setup.sh
     ```
-    This script creates a user, allows it to access MySQL both locally and remotely, and gives it permission to upload and execute user-defined functions
+    The setup script populates the databases, creates administrative users with the correct permissions, and removes the /root/temp folder.
 # Exploit
 This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-dev
 1. Start the MSF Console
@@ -54,7 +54,4 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     > show guid
     Server username: root
     ```
-5. The flag is located in ```/home/admin```.
-# Notes
-1. The MySQL login credentials can be changed by editing ```UbuntuServerX86-64/config_mysql.txt```
-2. The flag filename and contents can be changed by editing ```UbuntuServerX86-64/Dockerfile``` below the ```#this is the flag``` comment
+5. The flag is located in ```/root```
