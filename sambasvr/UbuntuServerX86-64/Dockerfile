@@ -51,4 +51,3 @@ COPY home_sambashare_krennic /home/sambashare/orson.krennic
 #copy the fake telnet server for the fake login traffic
 RUN mkdir -p /root/OFF-LIMITS
 COPY empty_room_svr.py /root/OFF-LIMITS/empty_room_svr.py
-RUN python3 /root/OFF-LIMITS/empty_room_svr.py &
