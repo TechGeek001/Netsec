@@ -35,7 +35,7 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
 This step gives the CTF participant traffic to intercept, revealing the creds needed to access the Samba share
 1. On whatever server (not the one the Samba container is on) execute the following commands:
     ```
-    $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/main/sambasvr/UbuntuServerX86-64/empty_room_client.py
+    $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/main/sambasvr/Client/empty_room_client.py
     $ python3 empty_room_client.py &
     ```
    This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration.
