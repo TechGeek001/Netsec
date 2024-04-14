@@ -25,6 +25,7 @@ echo 'sambasvr/UbuntuServerX86-64/etc_samba_smb.conf' >> .git/info/sparse-checko
 echo 'sambasvr/UbuntuServerX86-64/home_sambashare_erso' >> .git/info/sparse-checkout
 echo 'sambasvr/UbuntuServerX86-64/home_sambashare_ozzel' >> .git/info/sparse-checkout
 echo 'sambasvr/UbuntuServerX86-64/home_sambashare_krennic' >> .git/info/sparse-checkout
+echo 'sambasvr/UbuntuServerX86-64/empty_room_svr.py' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin main
