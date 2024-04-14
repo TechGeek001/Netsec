@@ -32,8 +32,8 @@ def send_credentials(host, port, username, password, interval):
 def main():
     host = 'samba.netsec-dockerisi.jhu.edu'  # Server IP (change if different)
     port = 45           # Port on which server is listening, adjusted to match your server
-    username = 'ctfuser'  # Example username
-    password = 'ctfpass'  # Example password
+    username = 'empire'  # Example username
+    password = 'NOrebelsPLEASE'  # Example password
     interval = 10        # Time in seconds between each login attempt
 
     send_credentials(host, port, username, password, interval)
