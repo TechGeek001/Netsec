@@ -21,13 +21,6 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     $ docker exec -it sambasvr bash
     # python3 /root/OFF-LIMITS/empty_room_svr.py &
     ```
-# Generate the Login Network Traffic
-This step gives the CTF participant traffic to intercept, revealing the creds needed to access the Samba share
-1. On whatever server (not the one the Samba server is on) execute the following commands:
-    ```
-    $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/main/sambasvr/UbuntuServerX86-64/empty_room_client.py
-    $ python3 empty_room_client.py &
-    ```
 # Accessing the Share Drive
 1. Inside Kali, install the CIFS utility
     ```
