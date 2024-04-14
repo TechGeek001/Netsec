@@ -41,18 +41,21 @@ This step gives the CTF participant traffic to intercept, revealing the creds ne
    This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration.
 # Flag Walkthrough
 The goal of this CTF is to get the Death Star plans from the database server.
-1. Get Kendal Ozzel's creds
+1. Get access to the Samba share drive
   * nmap for samba (445)
+  * use wireshark to capture traffic going to the IP address
+  * capture network traffic (telnet to port 45) with the share drive creds
+2. Get Kendal Ozzel's creds
   * mount the share
   * in galen.erso's directory, run steghide on the image
   * nmap for mysql (3306)
   * use creds to access eadu database
   * kendal ozzel's creds are in plaintext in the users table
-2. Get Orson Krennic's creds
+3. Get Orson Krennic's creds
   * in kendal.ozzel's directory, unlock the .zip
   * orson krennic's creds are in plaintext in a file in the archive
   * in orson.krennic's directory, find the location of the flag on the database server
-3. Get the Death Star plans
+4. Get the Death Star plans
   * exploit a UDF vulnerability on the database server
   * as root (on the database server) navigate to the flag directory
   * download the flag file
