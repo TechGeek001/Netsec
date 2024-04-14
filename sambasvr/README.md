@@ -16,6 +16,11 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     $ docker build -t tsambasvr .
     $ docker run -d --name sambasvr --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --network host tsambasvr:latest
     ```
+4. Access the container and run the fake login listener in the background
+    ```
+    $ docker exec -it sambasvr bash
+    # python3 /root/OFF-LIMITS/empty_room_svr.py &
+    ```
 # Accessing the Share Drive
 1. Inside Kali, install the CIFS utility
     ```
