@@ -20,3 +20,12 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     ```
     $ docker exec -it sambasvr bash
     ```
+5. Inside the container, restart the smbd service
+    ```
+    # systemctl restart smbd
+    ```
+6. Inside Kali, mount the drive with
+    ```
+    $ sudo mkdir /mnt/public
+    $ sudo mount -t cifs //<target-ip>/Public /mnt/public
+    ```
