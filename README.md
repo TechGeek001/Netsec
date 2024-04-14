@@ -33,11 +33,12 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
 5. Restart the DHCP server with ```# systemctl restart isc-dhcp-server && systemctl status isc-dhcp-server```
 # Generate the Login Network Traffic
 This step gives the CTF participant traffic to intercept, revealing the creds needed to access the Samba share
-1. On whatever server (not the one the Samba server is on) execute the following commands:
+1. On whatever server (not the one the Samba container is on) execute the following commands:
     ```
     $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/main/sambasvr/UbuntuServerX86-64/empty_room_client.py
     $ python3 empty_room_client.py &
     ```
+   This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration.
 # Flag Walkthrough
 The goal of this CTF is to get the Death Star plans from the database server.
 1. Get Kendal Ozzel's creds
