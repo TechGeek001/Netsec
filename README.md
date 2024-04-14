@@ -35,7 +35,7 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
     $ wget https://raw.githubusercontent.com/TechGeek001/Netsec/main/sambasvr/Client/empty_room_client.py
     $ python3 empty_room_client.py &
     ```
-   This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration.
+   This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration. The "&" backgrounds the script for convenience.
 # Flag Walkthrough
 The goal of this CTF is to get the Death Star plans from the database server.
 1. Get access to the Samba share drive
