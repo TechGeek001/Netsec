@@ -57,3 +57,6 @@ COPY setup.sh /root/setup.sh
 
 #plant the flag
 COPY "Death-Star-Plans.png" "/root/Death-Star-Plans.png"
+
+#restore the original working directory
+WORKDIR /
