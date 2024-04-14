@@ -34,3 +34,8 @@ CMD ["/usr/lib/systemd/systemd", "--system"]
 
 #install samba
 RUN apt-get install samba
+RUN cd /home
+RUN mkdir -p /home/sambashare
+COPY etc_samba_smb.conf /etc/samba/smb.conf
+COPY chown nobody:nogroup /home/sambashare
+COPY chmod -R 0775 /home/sambashare
