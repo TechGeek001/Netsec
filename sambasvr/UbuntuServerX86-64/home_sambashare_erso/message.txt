@@ -4,6 +4,6 @@ Hello, I am Galen Erso. Director Krennic has hidden the Death Star plans are hid
 - All users access the share drive with a common set of credentials
 - Kendal Ozzel keeps backup copies of important documents on the Empire's share drive
 - I don't know what IP address the Empire's database server is on, but it uses the default MySQL port
-- Orson Krennic has unrestricted access to the database. He can even upload arbitrary user-defined functions to it! He changes his password frequently and rarely uses the same password twice.
+- Orson Krennic has unrestricted access to the database. He can even upload arbitrary user-defined functions to it! He changes his password frequently and never uses the same password twice.
 
 Oh, I also know that the Empire's network administrators have been complaining that some clients are mis-configured and are leaking sensitive information. Good luck!
