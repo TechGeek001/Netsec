@@ -56,4 +56,4 @@ RUN chmod 777 /usr/lib/mysql/plugin
 COPY setup.sh /root/setup.sh
 
 #plant the flag
-COPY "Death Star Plans.png" "/root/Death Star Plans.png"
+COPY "Death-Star-Plans.png" "/root/Death-Star-Plans.png"
