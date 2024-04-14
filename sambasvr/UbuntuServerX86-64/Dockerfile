@@ -41,7 +41,7 @@ RUN chown nobody:nogroup /home/sambashare
 RUN chmod -R 0775 /home/sambashare
 #create the shared user
 RUN useradd -s /usr/sbin/nologin -M empire
-RUN echo -e "NOrebelsPLEASE\nNOrebelsPLEASE" | smbpasswd -a -s empire
+RUN (echo "NOrebelsPLEASE"; echo "NOrebelsPLEASE") | smbpasswd -a -s empire
 
 #copy the important files
 COPY home_sambashare_erso /home/sambashare/galen.erso
