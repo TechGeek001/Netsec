@@ -38,13 +38,14 @@ This CTF is designed to work on top of the existing netsec-docker infrastructure
    This will periodically send the Samba credentials over telnet on port 45, simulating a misconfiguration. The "&" backgrounds the script for convenience.
 # Flag Walkthrough
 The goal of this CTF is to get the Death Star plans from the database server.
-1. Get access to the Samba share drive
+1. Get the image file
   * nmap for samba (445)
   * use wireshark to capture traffic going to the IP address
   * capture network traffic (telnet to port 45) with the share drive creds
-2. Get Galen Erso's creds
   * mount the share
-  * in galen.erso's directory, run steghide on the image
+  * download the image
+2. Get Galen Erso's creds
+  * run steghide on the image
   * cat the text file
 3. Get Kendal Ozzel's creds
   * nmap for mysql (3306)
