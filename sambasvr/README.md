@@ -18,7 +18,7 @@ These instructions will create a MySQL 5.7.20 instance inside a Docker container
     ```
 4. Exec into the Docker container
     ```
-    $ docker exec -it mysqldb bash
+    $ docker exec -it sambasvr bash
     ```
 4. Start the fake login listener in the background
     ```
